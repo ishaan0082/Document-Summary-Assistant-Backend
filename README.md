@@ -1,4 +1,7 @@
 # Document-Summary-Assistant-Backend
+<img width="1493" height="725" alt="image" src="https://github.com/user-attachments/assets/3e8ca415-a798-40c6-828c-e4452e2b3f2c" />
+
+Deployment Link -> https://document-summary-assistant-frontend.vercel.app/
 
 A powerful and efficient backend service designed to summarize large documents and extract key points using the Gemini API. This server provides a simple RESTful interface, making it easy to integrate summarization and analysis features into your applications.
 
