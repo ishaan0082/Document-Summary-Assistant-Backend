@@ -1,9 +1,4 @@
 # Document-Summary-Assistant-Backend
-# Document Summary Assistant - Backend
-
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Node.js Version](https://img.shields.io/badge/node.js-18.x%2B-blue.svg)
-![Framework](https://img.shields.io/badge/Framework-Express-green.svg)
 
 A powerful and efficient backend service designed to summarize large documents and extract key points using the Gemini API. This server provides a simple RESTful interface, making it easy to integrate summarization and analysis features into your applications.
 
@@ -59,3 +54,91 @@ Once the setup is complete, you can start the server with the following command:
 
 ```sh
 npm start
+
+The application will be available at http://localhost:3001.
+
+API Documentation
+Here are the details of the available API endpoints.
+
+Summarize Text
+Endpoint: /api/summarize
+
+Method: POST
+
+Description: Generates a summary for the provided text.
+
+Request Body (JSON):
+
+JSON
+
+{
+  "text": "Your long piece of text goes here...",
+  "length": "one-paragraph"
+}
+Example Response (JSON):
+
+JSON
+
+{
+  "result": "This is the generated concise summary of the text."
+}
+Extract Key Points
+Endpoint: /api/key-points
+
+Method: POST
+
+Description: Extracts the main bullet points from the provided text.
+
+Request Body (JSON):
+
+JSON
+
+{
+  "text": "Your long piece of text goes here..."
+}
+Example Response (JSON):
+
+JSON
+
+{
+  "result": "- This is the first key point.\n- This is the second key point."
+}
+Example Usage with curl
+Summarize:
+
+Bash
+
+curl -X POST http://localhost:3001/api/summarize \
+-H "Content-Type: application/json" \
+-d '{
+      "text": "Superconductivity is a set of physical properties observed in certain materials where electrical resistance vanishes and magnetic flux fields are expelled from the material. Any material exhibiting these properties is a superconductor.",
+      "length": "one-sentence"
+    }'
+Key Points:
+
+Bash
+
+curl -X POST http://localhost:3001/api/key-points \
+-H "Content-Type: application/json" \
+-d '{
+      "text": "Superconductivity is a set of physical properties observed in certain materials where electrical resistance vanishes and magnetic flux fields are expelled from the material. Any material exhibiting these properties is a superconductor."
+    }'
+🤝 Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+Fork the Project
+
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+
+Push to the Branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+📜 License
+Distributed under the MIT License. See LICENSE for more information.
+
+<p align="center">
+Made with ❤️ by Your Name
+</p>
